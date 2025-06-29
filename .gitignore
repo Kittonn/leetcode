@@ -1,1 +1,9 @@
 go-playground
+node_modules
+package.json
+pnpm-lock.yaml
+tsconfig.json
+dist
+src/
+test.py
+main.go

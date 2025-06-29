@@ -1,11 +1,11 @@
 func missingNumber(nums []int) int {
 	n := len(nums)
-	expectedSum := (n * (n + 1)) / 2
+	expectedValue := (n * (n + 1)) / 2
 
-	actualSum := 0
+	sum := 0
 	for _, num := range nums {
-		actualSum += num
+		sum += num
 	}
 
-	return expectedSum - actualSum
+	return expectedValue - sum
 }

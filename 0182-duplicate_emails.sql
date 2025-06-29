@@ -1,4 +1,4 @@
-select email as "Email"
-from Person p
+select email Email
+from Person
 group by email
 having count(email) > 1

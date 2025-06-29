@@ -1,2 +1,1 @@
-select tweet_id from tweets
-where length(content) > 15
+SELECT tweet_id FROM tweets WHERE Length(content) > 15;

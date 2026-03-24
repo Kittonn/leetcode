@@ -2,17 +2,16 @@ func isAnagram(s string, t string) bool {
     if len(s) != len(t) {
         return false
     }
+    
+    count := make(map[byte]int)
 
-    sSeen := make(map[byte]int)
-    tSeen := make(map[byte]int)
-
-    for i := range len(s) {
-        sSeen[s[i]]++
-        tSeen[t[i]]++
+    for i := range s {
+        count[s[i]]++
+        count[t[i]]--
     }
 
-    for i, v := range sSeen {
-        if tSeen[i] != v {
+    for _, v := range count {
+        if v != 0 {
             return false
         }
     }
